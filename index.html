@@ -86,13 +86,7 @@
 </body>
 </html>
 <script>
-var titles = ["s", "st", "ste", "step", "stepd", "stepd.", "stepd.a", "stepd.ad"];
-var currentTitleIndex = 7;
-function changeTitle() {
-    document.title = titles[currentTitleIndex];
-    currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-}
-setInterval(changeTitle, 300);
+setInterval(()=>document.title="stepd.ad".slice(0,Date.now()/300%9+1),300)
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
